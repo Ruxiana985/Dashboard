@@ -1,0 +1,30 @@
+:root{
+    --border-style: 3px solid black;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 2fr 5fr 2fr;
+    height: 100vh;
+}
+
+.item{
+    border: var(--border-style);
+}
+
+.header{
+    grid-row: 1/span 1;
+    grid-column: 2/span 2;
+}
+
+.dashboard{
+    grid-row: 1/span 2;
+}
