@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Playpen+Sans:wght@100..800&display=swap');
+
 :root{
-    --border-style: 3px solid black;
+    --border-style: 3px solid rgb(223, 209, 209);
+    --dashboard-backGround-color: linear-gradient(180deg,#460a5e,#1d0529);
+    --dashboard-textColor: white;
+    --project-cards: linear-gradient(to right, #2e1065 10%, #ddd6fe 10%);
 }
 
 html, body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: black;
+    font-family: "Dosis", sans-serif;
+    
 
 }
 
@@ -27,21 +35,24 @@ html, body{
 
 .dashboard{
     grid-row: 1/span 2;
+    background: var(--dashboard-backGround-color);
+    color: var(--dashboard-textColor);
 }
 
 .sub-project-container{
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 15px;
-    padding: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    padding: 20px;
     justify-content: center;
 
 }
 
 .sub-project-container > div{
     border: var(--border-style);
-    height: 220px;
+    height: 300px;
+    background: var(--project-cards);
 }
 
 .sub-project-container > p{
@@ -69,4 +80,45 @@ html, body{
 .right-bar-subcontainer > p{
     height: auto;
     border: var(--border-style);
+}
+
+.dash-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    gap: 100px;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+.icon {
+    filter: brightness(0) invert(1); /* Turns the icon color to white */
+  }
+  
+
+.dash-icon, 
+.home,
+.profile,
+.messages,
+.history,
+.tasks,
+.communities,
+.settings,
+.support,
+.privacy{
+    display: flex;
+    gap: 20px;
+}
+
+
+.second > div{
+    margin-bottom: 15px;
+}
+
+.third > div{
+    margin-bottom: 15px;
+    margin-right: 25px;
+
 }
