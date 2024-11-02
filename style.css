@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Playpen+Sans:wght@100..800&display=swap');
 
 :root{
-    --border-style: 3px solid rgb(223, 209, 209);
-    --dashboard-backGround-color: linear-gradient(180deg,#460a5e,#1d0529);
+    --border-style: 0px solid rgb(223, 209, 209);
+    
     --dashboard-textColor: white;
-    --project-cards: linear-gradient(to right, #2e1065 10%, #ddd6fe 10%);
+    --project-cards: linear-gradient(to right, #072b36 10%, #ffffff 10%);
+    --border-radius: 15px;
+    --dashboard-backGround-color: linear-gradient(125deg,rgb(7, 70, 78),black);
 }
 
 html, body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: black;
+    background:  linear-gradient(180deg, rgb(0, 8, 7), rgba(3, 36, 32, 0.74));
     font-family: "Dosis", sans-serif;
     
 
@@ -31,21 +33,39 @@ html, body{
 .header{
     grid-row: 1/span 1;
     grid-column: 2/span 2;
+    background: linear-gradient(90deg, rgba(5, 55, 61, 0.651), rgba(0, 0, 0, 0.568));
+    color: white;
+    font-size: 1.5rem;
 }
+
+.header-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 20px;
+}
+.first-flex, .second-flex{
+    display: flex;
+    justify-content: space-between;
+   
+}
+
 
 .dashboard{
     grid-row: 1/span 2;
     background: var(--dashboard-backGround-color);
     color: var(--dashboard-textColor);
+    
 }
 
 .sub-project-container{
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 50px;
     padding: 20px;
-    justify-content: center;
+    align-content:start;
+    justify-content: space-around;
 
 }
 
@@ -53,6 +73,7 @@ html, body{
     border: var(--border-style);
     height: 300px;
     background: var(--project-cards);
+    border-radius: var(--border-radius);
 }
 
 .sub-project-container > p{
@@ -64,22 +85,28 @@ html, body{
     display: flex;
     flex: 1;
     flex-direction:column;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
     align-items: center;
     height: 100%;
     padding: 15px;
+    color: white;
 }
 
 .right-bar-subcontainer > div{
      height: 300px;
      width: 300px;
      border: var(--border-style);
+     background-color:  #ffffff;
+     border-radius: var(--border-radius);
+     margin-bottom: 20px;
+     align-content: center;
 
 }
 
 .right-bar-subcontainer > p{
     height: auto;
-    border: var(--border-style);
+    
 }
 
 .dash-flex{
@@ -122,3 +149,22 @@ html, body{
     margin-right: 25px;
 
 }
+
+.btn {
+    height: 50px;
+    width: 200px;
+    background-color: rgba(50, 197, 185, 0.76);
+    border-radius: 20px;
+    margin-right: 15px;
+    box-shadow: 3px 7px 2px 2px rgb(34, 61, 52);
+    color: white;
+    font-size:1.5rem;
+}
+
+input{
+    width: 500px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
