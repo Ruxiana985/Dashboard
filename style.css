@@ -4,7 +4,7 @@
     --border-style: 0px solid rgb(223, 209, 209);
     
     --dashboard-textColor: white;
-    --project-cards: linear-gradient(to right, #072b36 10%, #ffffff 10%);
+    --project-cards: linear-gradient(to right, #072b36 7%, #ffffff 7%);
     --border-radius: 15px;
     --dashboard-backGround-color: linear-gradient(125deg,rgb(7, 70, 78),black);
 }
@@ -66,6 +66,7 @@ html, body{
     padding: 20px;
     align-content:start;
     justify-content: space-around;
+    
 
 }
 
@@ -74,10 +75,16 @@ html, body{
     height: 300px;
     background: var(--project-cards);
     border-radius: var(--border-radius);
+    text-align: center;
+    align-content: center;
+    
 }
 
 .sub-project-container > p{
     height: auto;
+    
+
+
 
 }
 
@@ -101,11 +108,15 @@ html, body{
      border-radius: var(--border-radius);
      margin-bottom: 20px;
      align-content: center;
+     color: black;
+     text-align: center;
 
 }
 
 .right-bar-subcontainer > p{
     height: auto;
+    font-weight: 300;
+    font-size: 1.6rem;
     
 }
 
@@ -168,3 +179,41 @@ input{
     margin-left: 20px;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+}
+
+.project1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: start;
+    align-items: center;
+    height: 100%;
+}
+
+.project1-icons{
+    display: flex;
+    gap: 15px;
+    margin-left: 200px;
+}
+
+
+.trending-profiles{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+
+
+}
+
+.trending-profiles > div{
+    display: flex;
+    gap: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
